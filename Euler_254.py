@@ -11,7 +11,14 @@ are stored in dict1.
 
 This program fails at n=37 because the number we are looking for
 is 13339, and it is not a combination of previous numbers...
+My understanding is that 37 needs to be constructed by taking
+9! = 362,880 ==> digitsum = 27 
+and adding 19 to it so that we get 362,899 ==> digitsum = 37.
+That 19 is obtained by putting together 1333, since
+1! + 3! + 3! + 3! = 19.
 
+The solution seems to reside in dealing with all the possible combinations
+of k digits that sum up to the desired number...
 
 @author: Julien Tardy
 
