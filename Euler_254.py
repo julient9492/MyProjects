@@ -9,7 +9,7 @@ this code is an attempt to reconstruct the smallest n by
 making combinations of the previous numbers found, which
 are stored in dict1.
 
-This program fails at n=37 because the number we are looking for
+This program fails at i=37 because the number we are looking for
 is 13339, and it is not a combination of previous numbers...
 My understanding is that 37 needs to be constructed by taking
 9! = 362,880 ==> digitsum = 27 
@@ -19,6 +19,28 @@ That 19 is obtained by putting together 1333, since
 
 The solution seems to reside in dealing with all the possible combinations
 of k digits that sum up to the desired number...
+
+Example for i = 10:
+
+1:    1! = 1       6:   6! = 720
+2:    2! = 2       7:   7! = 5040
+3:    3! = 6       8:   8! = 40320
+4:    4! = 24      9!   9! = 362880
+5:    5! = 120
+    
+    10 can only be obtained by summing AT LEAST 2 digits
+    
+    2 digits                        3 digits                            4 digits                                   
+    1+9 --> 19 --> 1333             1+0+9 --> 109 --> 1334444           1+0+0+9 --> 1009 --> 144556                ... 
+    2+8 --> 28 --> 224              1+1+8 --> 118 --> 223334444             .       .       .                      ...
+    3+7 --> 37 --> 1334             1+2+7 --> 127 --> 135                   .       .       .                      ...
+    .       .       .               .           .       .                   .       .       .
+    .       .       .               .           .       .               5+0+4+1 --> 5041 --> 17
+    .       .       .               .           .       .
+    9+1 --> 91 --> 1333444          7+2+1 --> 721 -->  16
+    
+    Here we see that 16 is the smallest number we can reconstruct for i=10.
+    
 
 @author: Julien Tardy
 
