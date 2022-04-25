@@ -23,9 +23,9 @@ of k digits that sum up to the desired number...
 Example for i = 10:
 
 1:    1! = 1       6:   6! = 720
-2:    2! = 2       7:   7! = 5040
-3:    3! = 6       8:   8! = 40320
-4:    4! = 24      9!   9! = 362880
+2:    2! = 2       7:   7! = 5040       WE USE THIS TABLE
+3:    3! = 6       8:   8! = 40320      TO RECONSTRUCT
+4:    4! = 24      9!   9! = 362880     THE NUMBERS BELOW
 5:    5! = 120
     
     10 can only be obtained by summing AT LEAST 2 digits
