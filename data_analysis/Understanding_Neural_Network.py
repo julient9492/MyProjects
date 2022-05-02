@@ -6,6 +6,7 @@ Created on Fri Apr 22 22:20:23 2022
 Following along sentdex's "Neural Networks from Scratch" Youtube series.
 
 We set up a basic Neural Network with 2 layers, weights, and ReLU activation.
+The weights are randomly initialized and the biases are set to 0.
 The input is imported from the dataset "Spiral", with is a set of hundreds of
 points (X,y) assembled in the shape of a spiral.
 Using matrix multiplication, the input coordinates (X,y) go through 2 layers
