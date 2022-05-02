@@ -1,7 +1,17 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Apr 22 22:20:23 2022
-Following along sentdex's "Neural Networks from Scratch" Youtube series
+
+
+Following along sentdex's "Neural Networks from Scratch" Youtube series.
+
+We set up a basic Neural Network with 2 layers, weights, and ReLU activation.
+The input is imported from the dataset "Spiral", with is a set of hundreds of
+points (X,y) assembled in the shape of a spiral.
+Using matrix multiplication, the input coordinates (X,y) go through 2 layers
+of 5 neurons, which output a final two-dimensional result.
+
+
 @author: Julien Tardy
 """
 import numpy as np
@@ -9,10 +19,6 @@ import nnfs
 from nnfs.datasets import spiral_data
 
 nnfs.init()
-
-X = [[1, 2, 3 ,2.5],
-     [2.0, 5.0, -1.0, 2.0],
-     [-1.5, 2.7, 3.3, -0.8]]
 
 X, y = spiral_data(100,3)
 
@@ -30,10 +36,9 @@ class Activation_ReLU:
         
 layer1 = Layer_Dense(2, 5)
 layer2 = Layer_Dense(5, 2)
-activation1 = Activation_ReLU()
 layer1.forward(X)
-activation1.forward(layer1.output)
-activation2 = Activation_ReLU()
-layer2.forward(activation1.output)
-activation2.forward(layer2.output)
-print(activation2.output)
+activation = Activation_ReLU()
+activation.forward(layer1.output)
+layer2.forward(activation.output)
+activation.forward(layer2.output)
+print(activation.output)
