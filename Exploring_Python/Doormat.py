@@ -4,7 +4,7 @@ Created on Sat Apr  9 20:03:02 2022
 
 HackerRank Doormat Exercise
 
-@author: Roland
+@author: Julien
 """
 
 bar = '|'
