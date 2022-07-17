@@ -1,3 +1,5 @@
+#Rule-based agent for Kaggle's Kore 2022 competition
+
 from kaggle_environments.envs.kore_fleets.helpers import *
 from random import randint
 import random
@@ -38,7 +40,7 @@ def agent(obs, config):
     spawn_cost = board.configuration.spawn_cost
     kore_left = me.kore
     
-    # loop through all shipyards you control
+    
     for shipyard in me.shipyards:
         action = None
         max_spawn = shipyard.max_spawn
